@@ -1,0 +1,1 @@
+dir bass-tabs /B /S > bass-tabs.txt 
