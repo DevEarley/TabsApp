@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tabs</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="list">
+        <h1>Tabs</h1>
+    </div>
+    <div id="content"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"
+            crossorigin="anonymous"
+            type="text/javascript"></script>
+    <script src="./microblog.js"></script>
+    <script type="text/javascript">
+        let converter = new showdown.Converter();
+        let files = [
+            './bass-tabs/childish-gambino-redbone.md',
+            './bass-tabs/jet-are-you-gonna-be-my-girl.md',
+            './bass-tabs/pink-floyd-comfortably-numb.md',
+            './bass-tabs/pink-floyd-money.md',
+            './bass-tabs/red-hot-chili-peppers-dark-necessities.md',
+            './bass-tabs/reel-big-fish-beer.md',
+            './bass-tabs/stevie-wonder-superstition.md',
+            './bass-tabs/toto-africa.md',
+        ];
+        let list = document.getElementById("list");
+        for (let i = 0; i < files.length; i++) {
+            let newItem = document.createElement("div");
+            let tabName = files[i];
+            newItem.onclick = () => {
+                clicked(tabName);
+            };
+            newItem.innerHTML = tabName;
+            newItem.className = "list-item";
+            list.appendChild(newItem)
+        }
+        clicked = (tabName) => {
+            init([], [tabName], converter);
+        }
+        init([], [files[0]], converter);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+body {
+    background: #000;
+    color: #FFF;
+    font-family: "trebuchet ms", verdana, arial;
+    font-size: 12px;
+    background-image: url('./photo-1564186763535-ebb21ef5277f.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+}
+
+#content {
+    max-width: 640px;
+    background-color: #000000EE;
+    padding: 20px;
+    margin-left: 260px;
+}
+
+h1 {
+    margin-top: 80px;
+}
+
+h1:first-child {
+    margin-top: 0px;
+}
+
+iframe {
+    width: 600px;
+    height: 400px;
+}
+
+#list {
+    padding: 20px;
+    background-color: #000000EE;
+    position: fixed;
+    width: 200px;
+    top: 0;
+    left: 10px;
+    overflow-y: auto;
+    max-height: calc(100vh - 40px);
+}
+
+.list-item {
+    padding: 6px;
+    cursor: pointer;
+    background-color: #FFFFFF15;
+    margin-bottom: 10px;
+}
+
+.list-item:hover {
+    background-color: #FFFFFF22;
+}
