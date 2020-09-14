@@ -1,8 +1,7 @@
 # Cardi B (feat Megan Thee Stallion) - WAP
 
-<iframe  src="https://www.youtube.com/embed/hsm4poTWjMs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 <iframe src="https://www.youtube.com/embed/Wc5IbN4xw70" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ```text
 G|-----------------------|
