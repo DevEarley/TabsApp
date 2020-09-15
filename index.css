@@ -33,10 +33,10 @@ iframe {
 }
 
 #list {
-    padding: 20px;
+    padding: 5px;
     background-color: #000000EE;
     position: fixed;
-    width: 200px;
+    width: 220px;
     top: 0;
     left: 10px;
     overflow-y: auto;
@@ -44,12 +44,26 @@ iframe {
 }
 
 .list-item {
-    padding: 6px;
+    padding: 5px;
     cursor: pointer;
     background-color: #FFFFFF15;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .list-item:hover {
+    background-color: #FFFFFF22;
+}
+
+button {
+    cursor: pointer;
+}
+
+button, input {
+    border: 1px solid #fff;
+    background-color: #FFFFFF15;
+    color: #FFFFFF;
+}
+
+button:hover, input:hover {
     background-color: #FFFFFF22;
 }

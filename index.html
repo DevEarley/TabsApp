@@ -9,6 +9,12 @@
 <body>
     <div id="list">
         <h1>Tabs</h1>
+        <div style="display: flex; margin-bottom:10px">
+            <button onclick="toggleAutoScroll()">Auto Scroll</button>
+            <input type="number" id="speed" value="1" style="width:50px"
+                   onchange="scrollSpeedChange(event)" />
+            <button onclick="scrollToTop()">Scroll To Top</button>
+        </div>
     </div>
     <div id="content"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"
@@ -19,23 +25,37 @@
         let converter = new showdown.Converter();
         //'./bass-tabs/_template_.md',
         let files = [
+            './bass-tabs/beatles-the-come-together.md',
             './bass-tabs/cardi-b-WAP.md',
             './bass-tabs/childish-gambino-redbone.md',
             './bass-tabs/fleetwood-mac-dreams.md',
+            './bass-tabs/golden-earring-radar-love.md',
             './bass-tabs/jet-are-you-gonna-be-my-girl.md',
             './bass-tabs/joji-slow-dancing-in-the-dark.md',
+            './bass-tabs/led-zeppelin-ramble-on.md',
+            './bass-tabs/led-zeppelin-the-lemon-song.md',
             './bass-tabs/pink-floyd-comfortably-numb.md',
             './bass-tabs/pink-floyd-money.md',
+            './bass-tabs/queen-another-one-bites-the-dust.md',
             './bass-tabs/queen-bohemian-rhapsody.md',
             './bass-tabs/queen-dont-stop-me-now.md',
             './bass-tabs/red-hot-chili-peppers-dark-necessities.md',
+            './bass-tabs/red-hot-chili-peppers-give-it-away.md',
             './bass-tabs/reel-big-fish-beer.md',
+            './bass-tabs/rush-yyz.md',
             './bass-tabs/stevie-wonder-superstition.md',
+            './bass-tabs/sublime-caress-me-down.md',
             './bass-tabs/sublime-doin-time.md',
             './bass-tabs/sublime-santeria.md',
             './bass-tabs/toto-africa.md',
+
         ];
         let list = document.getElementById("list");
+        let content = document.getElementById("content");
+        let scrollInterval;
+        let autoScroll = false;
+        let speed = 500;
+
         for (let i = 0; i < files.length; i++) {
             let newItem = document.createElement("div");
             let tabName = files[i];
@@ -46,10 +66,36 @@
             newItem.className = "list-item";
             list.appendChild(newItem)
         }
+
         clicked = (tabName) => {
+            content.scrollTop = 0;
             init([], [tabName], converter);
         }
+
         init([], [files[0]], converter);
+
+
+        toggleAutoScroll = () => {
+            autoScroll = !autoScroll;
+            scroll();
+        }
+
+        scroll = () => {
+            clearInterval(scrollInterval);
+            if (autoScroll == true) {
+                scrollInterval = setInterval(() => {
+                    window.scrollBy(0, 1);
+                }, speed);
+            }
+        }
+        scrollToTop = () => {
+            window.scrollTo(0, 0);
+        }
+        scrollSpeedChange = (value) => {
+            speed = 500 / parseInt(value.target.value);
+            scroll();
+        }
+
     </script>
 </body>
 
