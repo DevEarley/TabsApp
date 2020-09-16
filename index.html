@@ -47,8 +47,8 @@
             './bass-tabs/sublime-caress-me-down.md',
             './bass-tabs/sublime-doin-time.md',
             './bass-tabs/sublime-santeria.md',
+            './bass-tabs/toots-monkey-man.md',
             './bass-tabs/toto-africa.md',
-
         ];
         let list = document.getElementById("list");
         let content = document.getElementById("content");
@@ -68,7 +68,7 @@
         }
 
         clicked = (tabName) => {
-            content.scrollTop = 0;
+            window.scrollTo(0, 0);
             init([], [tabName], converter);
         }
 

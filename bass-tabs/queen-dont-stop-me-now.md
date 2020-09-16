@@ -2,7 +2,7 @@
 
 <iframe src="https://www.youtube.com/embed/HgzGwKwLmgM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-```text 
+```text
 [Intro]
 (0:00-0:34)
   F    Am   Dm   Gm   C                 F                  F7                 Bb                 Gm
